@@ -2,7 +2,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 const { InjectManifest } = require("workbox-webpack-plugin");
-
+// TODO: Add CSS loaders and babel to webpack.
+// TODO: Add and configure workbox plugins for a service worker and manifest file.
 module.exports = () => {
   return {
     mode: "development",
@@ -17,7 +18,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
-        title: "Another Text Editor",
+        title: "Just Another Text Editor",
       }),
 
       new InjectManifest({
@@ -25,7 +26,6 @@ module.exports = () => {
         swDest: "src-sw.js",
       }),
 
-      // TODO: Add and configure workbox plugins for a service worker and manifest file.
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
@@ -55,7 +55,7 @@ module.exports = () => {
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
-          // TODO: Add CSS loaders and babel to webpack.
+
           // We use babel-loader in order to use ES6.
           use: {
             loader: "babel-loader",

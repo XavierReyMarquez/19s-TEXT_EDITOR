@@ -14,7 +14,7 @@ const initdb = async () =>
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
-  contentDb = await openDB("jate", 1);
+  const contactDb = await openDB("jate", 1);
 
   const tx = contactDb.transaction("jate", "readwrite");
 
