@@ -26,7 +26,6 @@ To install the applitcaion the user must click the install button at the top rig
 A user can write/type on the application. which allows the to make small notes or test simple code even when not connected to the internet.
 
 ![A picture of the deployed application](./assets/screenshots/Capture.PNG "A screenshot of the text editor application")
-![A picture of the application once its been installed as a web app](./images/PWAInstalled.PNG "A picture of the application once its been installed as a web app")
 
 ## Contribution
 
